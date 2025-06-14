@@ -1,8 +1,8 @@
-package main.java.ui;
+package ui;
 
 import javax.swing.*;
 
-import main.java.utils.UserUtils;
+import utils.UserUtils;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -97,6 +97,7 @@ public class LoginJFrame extends JFrame {
         loginButton.addActionListener(new ActionListener() {
             /**
              * 当登录按钮被点击时执行的方法。
+             * 
              * @param e 事件对象，包含事件的相关信息。
              */
             @Override
@@ -133,6 +134,7 @@ public class LoginJFrame extends JFrame {
         registerButton.addActionListener(new ActionListener() {
             /**
              * 当注册按钮被点击时执行的方法。
+             * 
              * @param e 事件对象，包含事件的相关信息。
              */
             @Override
@@ -148,6 +150,7 @@ public class LoginJFrame extends JFrame {
         forgetPasswordButton.addActionListener(new ActionListener() {
             /**
              * 当忘记密码按钮被点击时执行的方法。
+             * 
              * @param e 事件对象，包含事件的相关信息。
              */
             @Override
@@ -163,6 +166,7 @@ public class LoginJFrame extends JFrame {
         exitButton.addActionListener(new ActionListener() {
             /**
              * 当退出按钮被点击时执行的方法。
+             * 
              * @param e 事件对象，包含事件的相关信息。
              */
             @Override

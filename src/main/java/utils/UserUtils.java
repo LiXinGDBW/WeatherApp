@@ -1,4 +1,4 @@
-package main.java.utils;
+package utils;
 
 import java.sql.*;
 import javax.swing.JOptionPane;

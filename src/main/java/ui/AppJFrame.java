@@ -1,9 +1,9 @@
-package main.java.ui;
+package ui;
 
 import javax.swing.*;
 
-import main.java.utils.BackgroundUtils;
-import main.java.utils.WeatherUtils;
+import utils.BackgroundUtils;
+import utils.WeatherUtils;
 
 import java.awt.event.*;
 import java.awt.*;
@@ -494,7 +494,7 @@ public class AppJFrame extends JFrame {
         public void setBackgroundImage(String imagePath) {
 
             // 加载背景图片
-            backgroundImage = new ImageIcon(new File("test-classes\\images\\" + imagePath).getAbsolutePath())
+            backgroundImage = new ImageIcon(getClass().getResource("/images/" + imagePath))
                     .getImage();
             // 重绘面板，更新背景图片
             repaint();

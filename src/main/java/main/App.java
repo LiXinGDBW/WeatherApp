@@ -1,6 +1,6 @@
-package main.java.main;
+package main;
 
-import main.java.ui.LoginJFrame;
+import ui.LoginJFrame;
 
 /**
  * 程序的入口类，负责启动整个应用程序。
