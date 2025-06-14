@@ -1,7 +1,9 @@
-package ui;
+package main.java.ui;
 
 import javax.swing.*;
-import utils.UserUtils;
+
+import main.java.utils.UserUtils;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 

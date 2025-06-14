@@ -1,11 +1,13 @@
-package ui;
+package main.java.ui;
 
 import javax.swing.*;
+
+import main.java.utils.BackgroundUtils;
+import main.java.utils.WeatherUtils;
+
 import java.awt.event.*;
 import java.awt.*;
 import java.io.File;
-import utils.WeatherUtils;
-import utils.BackgroundUtils;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -492,7 +494,8 @@ public class AppJFrame extends JFrame {
         public void setBackgroundImage(String imagePath) {
 
             // 加载背景图片
-            backgroundImage = new ImageIcon(new File("png/" + imagePath).getAbsolutePath()).getImage();
+            backgroundImage = new ImageIcon(new File("test-classes\\images\\" + imagePath).getAbsolutePath())
+                    .getImage();
             // 重绘面板，更新背景图片
             repaint();
         }

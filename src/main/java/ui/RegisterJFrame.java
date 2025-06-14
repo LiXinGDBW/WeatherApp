@@ -1,7 +1,9 @@
-package ui;
+package main.java.ui;
 
 import javax.swing.*;
-import utils.DatabaseUtils;
+
+import main.java.utils.DatabaseUtils;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
