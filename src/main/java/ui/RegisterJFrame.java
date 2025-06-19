@@ -1,9 +1,8 @@
 package ui;
 
 import javax.swing.*;
-
 import utils.DatabaseUtils;
-
+import utils.WeatherUtils;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
@@ -115,45 +114,13 @@ public class RegisterJFrame extends JFrame {
         // 将地区标签添加到窗口中
         add(regionLabel);
 
+        // 调用 WeatherUtils 类的 loadCityNames 方法加载城市名称
+        String[] cityNames = WeatherUtils.loadCityNames();
         // 创建地区选择框
-        JComboBox<String> regionComboBox = new JComboBox<>();
+        JComboBox<String> regionComboBox = new JComboBox<>(cityNames);
         // 添加默认选项“请选择地区”
         regionComboBox.addItem("请选择地区");
-        // 添加各种地区选项
-        regionComboBox.addItem("北京");
-        regionComboBox.addItem("天津");
-        regionComboBox.addItem("上海");
-        regionComboBox.addItem("重庆");
-        regionComboBox.addItem("哈尔滨");
-        regionComboBox.addItem("长春");
-        regionComboBox.addItem("沈阳");
-        regionComboBox.addItem("呼和浩特");
-        regionComboBox.addItem("乌鲁木齐");
-        regionComboBox.addItem("拉萨");
-        regionComboBox.addItem("西宁");
-        regionComboBox.addItem("兰州");
-        regionComboBox.addItem("银川");
-        regionComboBox.addItem("西安");
-        regionComboBox.addItem("太原");
-        regionComboBox.addItem("石家庄");
-        regionComboBox.addItem("济南");
-        regionComboBox.addItem("郑州");
-        regionComboBox.addItem("南京");
-        regionComboBox.addItem("合肥");
-        regionComboBox.addItem("武汉");
-        regionComboBox.addItem("成都");
-        regionComboBox.addItem("长沙");
-        regionComboBox.addItem("昆明");
-        regionComboBox.addItem("南昌");
-        regionComboBox.addItem("贵阳");
-        regionComboBox.addItem("南宁");
-        regionComboBox.addItem("广州");
-        regionComboBox.addItem("福州");
-        regionComboBox.addItem("杭州");
-        regionComboBox.addItem("海口");
-        regionComboBox.addItem("香港");
-        regionComboBox.addItem("澳门");
-        regionComboBox.addItem("台北");
+        regionComboBox.setSelectedItem("请选择地区");
         // 设置地区选择框的位置和大小
         regionComboBox.setBounds(160, 215, 165, 25);
         // 将地区选择框添加到窗口中

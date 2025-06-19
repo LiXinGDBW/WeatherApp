@@ -7,7 +7,6 @@ import utils.WeatherUtils;
 
 import java.awt.event.*;
 import java.awt.*;
-import java.io.File;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
