@@ -4,3 +4,6 @@ git init  # 初始化 Git 仓库
 git add .  # 添加所有文件
 git commit -m "提交说明"  # 提交代码到本地仓库
 git push origin <分支名>  # 通常是 main 或 master，推送代码到远程仓库
+git pull origin master  #拉取远程分支的最新内容
+git add <冲突文件>
+git commit -m "解决冲突"  #解决冲突
