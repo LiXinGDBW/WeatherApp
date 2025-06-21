@@ -1,4 +1,0 @@
-pom.xml定义项目的构建、依赖管理和插件配置
-mvn clean  清理项目
-mvn compile  编译项目
-mvn package  打包项目，生成的文件通常位于 target 文件夹中
