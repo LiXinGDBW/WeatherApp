@@ -72,7 +72,7 @@ public class AppJFrame extends JFrame {
         // 中间内容区域
         JPanel contentPanel = new JPanel();
 
-        // 使用 GridLayout 将内容分为三部分
+        // 使用 GridLayout 将内容分为三部分，三行一列
         contentPanel.setLayout(new GridLayout(3, 1));
         // 设置内容面板为透明
         contentPanel.setOpaque(false);
@@ -80,7 +80,7 @@ public class AppJFrame extends JFrame {
         // 默认选中用户地区的天气信息
         String selectedRegion = region;
 
-        // 创建标题区域
+        // 创建内容区域
         JPanel titlePanel = new JPanel();
         // 设置标题区域的布局为 FlowLayout
         titlePanel.setLayout(new FlowLayout());
@@ -171,12 +171,12 @@ public class AppJFrame extends JFrame {
 
         // 底部状态栏
         JPanel statusBar = new JPanel();
-        // 设置底部状态栏的布局为 BorderLayout
+        // 设置底部状态栏的布局为 BorderLayout，分为东西南北中五个区域
         statusBar.setLayout(new BorderLayout());
         // 设置底部状态栏为透明
         statusBar.setOpaque(false);
 
-        // 时间栏
+        // 时间栏为FlowLayout布局，分为对齐方式，水平间距和垂直间距
         JPanel timePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         // 设置时间栏为透明
         timePanel.setOpaque(false);
@@ -202,13 +202,13 @@ public class AppJFrame extends JFrame {
         statusBar.add(timePanel, BorderLayout.WEST);
         statusBar.add(userPanel, BorderLayout.EAST);
 
-        // 定时器更新时间
+        // 定时器更新时间，触法间隔，每秒更新一次
         Timer timer = new Timer(1000, e -> {
 
             // 获取当前时间
             LocalDateTime now = LocalDateTime.now();
 
-            // 格式化时间
+            // 格式化时间，DateTimeFormatter是Java中的时间格式化类，ofPattern("yyyy-MM-dd HH:mm:ss") 定义了时间格式
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
             // 更新时间标签的文本
@@ -492,7 +492,7 @@ public class AppJFrame extends JFrame {
          */
         public void setBackgroundImage(String imagePath) {
 
-            // 加载背景图片
+            // 加载背景图片，使用getClass().getResource()从类路径中加载图片
             backgroundImage = new ImageIcon(getClass().getResource("/images/" + imagePath))
                     .getImage();
             // 重绘面板，更新背景图片

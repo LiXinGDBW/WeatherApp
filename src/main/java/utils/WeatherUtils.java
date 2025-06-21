@@ -15,9 +15,10 @@ public class WeatherUtils {
      * @return 该城市的天气信息；如果查询失败则返回“未知”或“错误”。
      */
     public static String fetchWeatherInfo(String cityCode) {
-        // SQL 查询语句，根据城市编码查询天气信息
+        // SQL 查询语句，根据城市编码查询天气信息（占位符）
         String fetchWeatherSql = "SELECT weather FROM region_weather WHERE code = ?";
 
+        // PreparedStatement：使用预编译的 SQL 语句，防止 SQL 注入
         try (Connection conn = DatabaseUtils.getConnection();
                 PreparedStatement stmt = conn.prepareStatement(fetchWeatherSql)) {
 
@@ -59,6 +60,8 @@ public class WeatherUtils {
         // SQL 查询语句，从 region_code 表中查询所有地区名称
         String sql = "SELECT region FROM region_code";
 
+        // Connection程序可以与数据库建立连接，用于后续的数据库操作
+        // Statement来执行静态 SQL 语句并返回结果集
         try (Connection conn = DatabaseUtils.getConnection();
                 Statement stmt = conn.createStatement();
                 ResultSet resultSet = stmt.executeQuery(sql)) {
